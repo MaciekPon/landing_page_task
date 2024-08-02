@@ -1,7 +1,7 @@
 <template>
   <Toast />
   <ConfirmDialog />
-  <form @submit.prevent class="p-fluid form-container">
+  <form @submit.prevent class="form-container">
     <p
       style="
         text-align: center;
@@ -289,6 +289,7 @@ export default defineComponent({
   border: 1px solid lightgray;
   border-radius: 10px;
   padding: 20px;
+  margin: 0 10px;
 }
 
 .form-container input {

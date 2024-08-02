@@ -3,10 +3,10 @@
     <div class="first-container">
       <ImageSelector />
       <div>
-        <h1 style="text-wrap: wrap; font-size: 50px; margin-bottom: 0">
+        <h1 class="header-title" style="">
           Chace to win a StockX Mystery Box today!
         </h1>
-        <p style="margin-top: 0">
+        <p style="" class="header-description">
           Unleash the Excitement of Mystery Electronics
         </p>
 
@@ -45,14 +45,46 @@ export default defineComponent({
   width: 100%;
 }
 
+.header-title {
+  text-wrap: wrap;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin: 0 10px;
+}
+
+.header-description {
+  margin-top: 0;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
 .first-container {
   display: flex;
   justify-content: space-between;
 }
 
+@media (max-width: 1020px) {
+  .header-title {
+    font-size: 36px;
+    line-height: 1.2em;
+  }
+}
 @media (max-width: 965px) {
   .first-container {
     flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .header-title {
+    font-size: 36px;
+    line-height: 1.2em;
+  }
+
+  .header-description {
+    margin-top: 0;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 }
 

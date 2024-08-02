@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
-// import "primeicons/primeicons.css";
 import InputText from "primevue/inputtext";
 import InputNumber from "primevue/inputnumber";
 import Button from "primevue/button";

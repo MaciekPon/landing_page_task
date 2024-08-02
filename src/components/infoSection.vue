@@ -56,9 +56,16 @@ export default defineComponent({
   padding: 0 10px;
 }
 
+.info-container h4 {
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .section-container {
     flex-direction: column;
+  }
+  .info-container {
+    padding: 10px;
   }
 }
 </style>

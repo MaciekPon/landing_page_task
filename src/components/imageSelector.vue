@@ -3,10 +3,8 @@
     <div class="selected-image">
       <img :src="currentImage" alt="current-image" />
       <div class="price-container">
-        <span style="font-size: 36px">${{ boxPrice }}</span>
-        <span style="font-size: 12px; font-weight: 100"
-          >original value 500$</span
-        >
+        <span class="price-box">${{ boxPrice }}</span>
+        <span class="price-info">original value 500$</span>
       </div>
     </div>
     <div class="images-container">
@@ -110,7 +108,16 @@ export default defineComponent({
   width: 480px;
 }
 
-@media (max-width: 965px) {
+.price-box {
+  font-size: 36px;
+}
+
+.price-info {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+@media (max-width: 1020px) {
   .image-container {
     width: 100%;
     display: flex;
@@ -128,12 +135,42 @@ export default defineComponent({
   .images-container {
     width: 400px;
   }
+
+  .price-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .price-box {
+    font-size: 25px;
+  }
+
+  .price-info {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 768px) {
   .selected-image,
   .selected-image img {
     width: 350px;
+  }
+
+  .images-container {
+    width: 350px;
+  }
+
+  .price-container {
+    width: 90px;
+    height: 90px;
+  }
+
+  .price-box {
+    font-size: 20px;
+  }
+
+  .price-info {
+    font-size: 10px;
   }
 }
 </style>

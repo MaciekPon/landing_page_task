@@ -9,8 +9,8 @@
         margin-bottom: 25px;
       "
     >
-      <h2 class="header-section">Top Tech Mystery Box at Unbeatable Prices</h2>
-      <div>
+      <h2 class="header-title">Top Tech Mystery Box at Unbeatable Prices</h2>
+      <div class="about-container">
         <span class="about-description">Free shipping</span>
         <span class="about-description">Easy returns</span>
         <span style="padding-left: 5px; color: #006340; font-weight: 600"
@@ -78,7 +78,11 @@ img {
   align-items: center;
 }
 
-.header-section {
+/* .description-container img {
+  width: 70%;
+} */
+
+.header-title {
   font-size: 40px;
   width: 600px;
   text-align: center;
@@ -108,14 +112,29 @@ h2 {
   text-align: start;
 }
 
+@media (max-width: 1024px) {
+  .description-container img {
+    width: 60%;
+  }
+}
+
 @media (max-width: 900px) {
   h2 {
     font-size: 28px;
   }
 
-  .header-section {
+  .header-title {
     font-size: 30px;
     width: 100%;
+  }
+
+  .description-container h2 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .description-container img {
+    width: 50%;
   }
 
   .description-container {
@@ -124,6 +143,23 @@ h2 {
 
   .description-container:nth-child(2n-1) {
     flex-direction: column;
+  }
+
+  .about-container {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .about-description {
+    padding: 0 10px;
+    border-right: none;
+    border-bottom: 1px solid #006340;
   }
 
   img {
