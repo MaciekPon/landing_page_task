@@ -148,11 +148,9 @@ h2 {
   }
 
   .about-container {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     display: flex;
-
-    /* flex-direction: column; */
   }
 
   .description {
@@ -160,12 +158,18 @@ h2 {
   }
 
   .about-description {
-    padding: 0 10px;
-    font-size: 12px;
+    padding: 0 5px;
+    font-size: 14px;
   }
 
   img {
     width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-description {
+    font-size: 10px;
   }
 }
 </style>

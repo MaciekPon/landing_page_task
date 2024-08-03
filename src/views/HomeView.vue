@@ -53,7 +53,7 @@ export default defineComponent({
 
 .header-description {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 16px;
   margin: 5px 10px 15px 10px;
 }
 
@@ -83,7 +83,7 @@ export default defineComponent({
 
   .header-description {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 15px;
     text-align: center;
   }
@@ -91,7 +91,17 @@ export default defineComponent({
 
 @media (min-width: 1300px) {
   .container {
-    width: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1650px) {
+  .container {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;

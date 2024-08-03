@@ -217,21 +217,29 @@ export default defineComponent({
             label: "Yes",
           },
           accept: () => {
-            toast.add({
-              severity: "success",
-              summary: "Confirmed",
-              detail: "Send succesfuly!",
-              life: 2000,
-            });
+            if (window.innerWidth <= 600) {
+              alert("Send successfully");
+            } else {
+              toast.add({
+                severity: "success",
+                summary: "Confirmed",
+                detail: "Send successfully!",
+                life: 2000,
+              });
+            }
             clearForm();
           },
           reject: () => {
-            toast.add({
-              severity: "error",
-              summary: "Rejected",
-              detail: "",
-              life: 2000,
-            });
+            if (window.innerWidth <= 600) {
+              alert("Send successfully");
+            } else {
+              toast.add({
+                severity: "error",
+                summary: "Rejected",
+                detail: "",
+                life: 2000,
+              });
+            }
           },
         });
       } else {
@@ -281,6 +289,10 @@ export default defineComponent({
 .form-container input {
   height: 40px;
   margin: 5px 0;
+}
+
+.p-toast {
+  max-width: calc(100vw - 40px);
 }
 
 .form-images {
