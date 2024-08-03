@@ -44,10 +44,11 @@ export default defineComponent({
 
 .header-title {
   text-wrap: wrap;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 0;
   margin: 0 10px;
+  color: #293632;
 }
 
 .header-description {
@@ -90,7 +91,7 @@ export default defineComponent({
 
 @media (min-width: 1300px) {
   .container {
-    width: 70%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
