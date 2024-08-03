@@ -3,13 +3,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import HomeView from "@/views/HomeView.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     HomeView,
+  },
+
+  setup() {
+    onMounted(() => {
+      document.title = "Win stockX mystery box ";
+    });
   },
 });
 </script>
@@ -23,5 +29,6 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 }
 </style>

@@ -63,7 +63,7 @@ export default defineComponent({
 .images-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 480px;
 }
 
@@ -109,11 +109,11 @@ export default defineComponent({
 }
 
 .price-box {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .price-info {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 100;
 }
 

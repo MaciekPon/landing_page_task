@@ -2,17 +2,7 @@
   <Toast />
   <ConfirmDialog />
   <form @submit.prevent class="form-container">
-    <p
-      style="
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: 10px;
-        margin-top: 0;
-        font-weight: bold;
-      "
-    >
-      Enter details
-    </p>
+    <p class="form-header">Enter details</p>
     <div class="input-container">
       <div class="error-container">
         <InputText
@@ -105,21 +95,9 @@
       </span>
     </div>
 
-    <Button
-      @click="sendForm"
-      type="submit"
-      label="PROCEED TO PAYMENT"
-      style="background-color: #006340; color: #fff; cursor: pointer"
-    />
+    <button @click="sendForm" type="submit">proceed to payment</button>
 
-    <div
-      style="
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
+    <div class="form-images">
       <img src="@/assets/macafee-icon.png" />
       <img src="@/assets/trust-icon.png" />
       <img src="@/assets/bit-icon.png" />
@@ -283,6 +261,14 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.form-header {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -295,6 +281,30 @@ export default defineComponent({
 .form-container input {
   height: 40px;
   margin: 5px 0;
+}
+
+.form-images {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  background-color: #006340;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  height: 40px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #038255;
 }
 
 .input-container {

@@ -3,17 +3,14 @@
     <div class="first-container">
       <ImageSelector />
       <div>
-        <h1 class="header-title" style="">
-          Chace to win a StockX Mystery Box today!
-        </h1>
-        <p style="" class="header-description">
+        <h1 class="header-title">Chace to win a StockX Mystery Box today!</h1>
+        <p class="header-description">
           Unleash the Excitement of Mystery Electronics
         </p>
 
         <FormComponent />
       </div>
     </div>
-
     <AboutSection />
     <InfoSection />
     <Footer />
@@ -56,7 +53,7 @@ export default defineComponent({
 .header-description {
   margin-top: 0;
   font-size: 18px;
-  margin: 0 10px;
+  margin: 5px 10px 15px 10px;
 }
 
 .first-container {
@@ -68,6 +65,7 @@ export default defineComponent({
   .header-title {
     font-size: 36px;
     line-height: 1.2em;
+    margin-top: 14px;
   }
 }
 @media (max-width: 965px) {
@@ -79,12 +77,14 @@ export default defineComponent({
   .header-title {
     font-size: 36px;
     line-height: 1.2em;
+    text-align: center;
   }
 
   .header-description {
     margin-top: 0;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
 

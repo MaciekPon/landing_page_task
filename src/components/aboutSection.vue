@@ -1,21 +1,13 @@
 <template>
   <section class="section-container">
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 25px;
-      "
-    >
-      <h2 class="header-title">Top Tech Mystery Box at Unbeatable Prices</h2>
+    <div class="header-container">
+      <h2 class="header-title">
+        Top Tech Mystery Box <span>at Unbeatable Prices</span>
+      </h2>
       <div class="about-container">
-        <span class="about-description">Free shipping</span>
+        <span class="about-description">Fast shipping</span>
         <span class="about-description">Easy returns</span>
-        <span style="padding-left: 5px; color: #006340; font-weight: 600"
-          >Special discount for students</span
-        >
+        <span class="about-description">Special discount for students</span>
       </div>
     </div>
     <div class="description-container">
@@ -69,8 +61,17 @@ export default defineComponent({
 </script>
 
 <style scoped>
-img {
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.description-container img {
   border-radius: 10%;
+  width: 500px;
 }
 
 .description-container {
@@ -78,15 +79,13 @@ img {
   align-items: center;
 }
 
-/* .description-container img {
-  width: 70%;
-} */
-
 .header-title {
   font-size: 40px;
   width: 600px;
   text-align: center;
   color: #2d473e;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0;
 }
 
@@ -95,11 +94,14 @@ img {
 }
 
 .about-description {
-  padding-right: 5px;
   padding-left: 5px;
   font-weight: 600;
-  border-right: 1px solid #006340;
   color: #006340;
+}
+
+.about-description:nth-child(-n + 2) {
+  padding-right: 5px;
+  border-right: 1px solid #006340;
 }
 
 .description {
@@ -114,7 +116,7 @@ h2 {
 
 @media (max-width: 1024px) {
   .description-container img {
-    width: 60%;
+    width: 400px;
   }
 }
 
@@ -134,7 +136,7 @@ h2 {
   }
 
   .description-container img {
-    width: 50%;
+    width: 300px;
   }
 
   .description-container {
@@ -149,7 +151,8 @@ h2 {
     padding: 10px;
     text-align: center;
     display: flex;
-    flex-direction: column;
+
+    /* flex-direction: column; */
   }
 
   .description {
@@ -158,12 +161,11 @@ h2 {
 
   .about-description {
     padding: 0 10px;
-    border-right: none;
-    border-bottom: 1px solid #006340;
+    font-size: 12px;
   }
 
   img {
-    width: 80%;
+    width: 90%;
   }
 }
 </style>
